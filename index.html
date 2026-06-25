@@ -100,82 +100,68 @@
 </head>
 <body>
 
-    <audio id="music" loop preload="auto">
-        <source src="fondo-xv.mp3" type="audio/mpeg">
-    
-    <header>
-        <div class="overlay">
-            <div class="monograma">👑 AG</div>
-            <div class="frase">Una noche mágica está por comenzar</div>
-            <h1>Los XV de Alma</h1>
-            <div class="fecha">10 · 09 · 26 — 20:30 hs</div>
-            <br>
-            <button class="boton" onclick="toggleMusic()">▶ Música</button>
-        </div>
-    </header>
+<header>
+    <div class="overlay">
+        <div class="monograma">👑 AG</div>
+        <div class="frase">Una noche mágica está por comenzar</div>
+        <h1>Los XV de Alma</h1>
+        <div class="fecha">10 · 09 · 26 — 20:30 hs</div>
+    </div>
+</header>
 
-    <section class="seccion">
-        <div class="tarjeta">
-            <h2>✨ Estás invitado ✨</h2>
-            <p>Hay momentos inolvidables que permanecen para siempre en el corazón. Hoy quiero compartir contigo uno de los más especiales de mi vida.</p>
+<section class="seccion">
+    <div class="tarjeta">
+        <h2>✨ Estás invitado ✨</h2>
+        <p>Hay momentos inolvidables que permanecen para siempre en el corazón. Hoy quiero compartir contigo uno de los más especiales de mi vida.</p>
 
-            <h2>📍 Evento</h2>
-            <p><b>Star Recepciones</b></p>
-            <p>10 de septiembre de 2026</p>
-            <p>20:30 hs</p>
-            <a class="boton" href="https://maps.app.goo.gl/Nk3jnLj1DmRLYM8R7" target="_blank">Ver ubicación</a>
+        <h2>📍 Evento</h2>
+        <p><b>Star Recepciones</b></p>
+        <p>10 de septiembre de 2026</p>
+        <p>20:30 hs</p>
+        <a class="boton" href="https://maps.app.goo.gl/Nk3jnLj1DmRLYM8R7" target="_blank">Ver ubicación</a>
 
-            <h2>⏳ Cuenta regresiva</h2>
-            <div id="contador"></div>
+        <h2>⏳ Cuenta regresiva</h2>
+        <div id="contador"></div>
 
-            <h2>✨ Dress Code</h2>
-            <p><b>Sport elegant</b></p>
-            <p>Viste lo que te haga brillar</p>
+        <h2>✨ Dress Code</h2>
+        <p><b>Sport elegant</b></p>
+        <p>Viste lo que te haga brillar</p>
 
-            <h2>🎁 Regalos</h2>
-            <p>Tu presencia será mi mejor regalo.<br>Pero si además deseas obsequiarme algo, agradeceré tu cariño a través de una contribución para mis sueños y proyectos futuros.</p>
-            <p><b>Banco:</b> Sudameris</p>
-            <p><b>Titular:</b> María Fabiola Riveros</p>
-            <p><b>Alias:</b> 2505225</p>
+        <h2>🎁 Regalos</h2>
+        <p>Tu presencia será mi mejor regalo.<br>Pero si además deseas obsequiarme algo, agradeceré tu cariño a través de una contribución para mis sueños y proyectos futuros.</p>
+        <p><b>Banco:</b> Sudameris</p>
+        <p><b>Titular:</b> María Fabiola Riveros</p>
+        <p><b>Alias:</b> 2505225</p>
 
-            <h2>💌 Confirmación</h2>
-            <a class="boton" href="https://wa.me/595983713463" target="_blank">Confirmar asistencia</a>
-        </div>
-    </section>
+        <h2>💌 Confirmación</h2>
+        <a class="boton" href="https://wa.me/595983713463" target="_blank">Confirmar asistencia</a>
+    </div>
+</section>
 
-    <footer>
-        Gracias por acompañarme en una noche tan especial 💖
-    </footer>
+<footer>
+    Gracias por acompañarme en una noche tan especial 💖
+</footer>
 
-    <script>
-        var fechaEvento = new Date("Sep 10, 2026 20:30:00").getTime();
+<script>
+    var fechaEvento = new Date("Sep 10, 2026 20:30:00").getTime();
 
-        setInterval(function(){
-            var ahora = new Date().getTime();
-            var distancia = fechaEvento - ahora;
+    setInterval(function(){
+        var ahora = new Date().getTime();
+        var distancia = fechaEvento - ahora;
 
-            if (distancia < 0) {
-                document.getElementById("contador").innerHTML = "¡La fiesta ya comenzó! 🎉";
-                return;
-            }
-
-            var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-            var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-            var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-            document.getElementById("contador").innerHTML = dias + " días • " + horas + " h • " + minutos + " m • " + segundos + " s";
-        }, 1000);
-
-        function toggleMusic(){
-            var music = document.getElementById("music");
-            if(music.paused){
-                music.play().catch(function(){});
-            } else {
-                music.pause();
-            }
+        if (distancia < 0) {
+            document.getElementById("contador").innerHTML = "¡La fiesta ya comenzó! 🎉";
+            return;
         }
-    </script>
+
+        var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        document.getElementById("contador").innerHTML = dias + " días • " + horas + " h • " + minutos + " m • " + segundos + " s";
+    }, 1000);
+</script>
 
 </body>
 </html>
