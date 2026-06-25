@@ -15,12 +15,13 @@
             text-align: center;
         }
 
+        /* Portada CORREGIDA */
         header {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-                        url('alma-portada.jpg');
+                        url('portada-xvalma.jpg');
             background-size: cover;
-            background-position: center top;
+            background-position: center top; /* ← Para que no corte la cabeza */
             background-repeat: no-repeat;
             display: flex;
             justify-content: center;
@@ -90,11 +91,30 @@
             font-weight: bold;
         }
 
+        /* 🆕 Estilo para las fotos inferiores */
+        .galeria {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+        }
+
+        .galeria img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border: 3px solid #f7d9e4;
+        }
+
         footer {
             background: #f7d9e4;
             padding: 30px;
             color: #7b5b5b;
-            margin-top: 50px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -128,13 +148,25 @@
         <p>Viste lo que te haga brillar</p>
 
         <h2>🎁 Regalos</h2>
-        <p>Tu presencia será mi mejor regalo.<br>Pero si además deseas obsequiarme algo, agradeceré tu cariño a través de una contribución para mis sueños y proyectos futuros.</p>
+        <p>Tu presencia será mi mejor regalo.<br>Pero si además deseas obsequiarme algo, agradeceré tu cariño a través de una contribución para mis sueños y proyectos futuros. Datos para transferencia.</p>
         <p><b>Banco:</b> Sudameris</p>
         <p><b>Titular:</b> María Fabiola Riveros</p>
         <p><b>Alias:</b> 2505225</p>
 
         <h2>💌 Confirmación</h2>
         <a class="boton" href="https://wa.me/595983713463" target="_blank">Confirmar asistencia</a>
+    </div>
+</section>
+
+<!-- 🆕 Sección de fotos -->
+<section>
+    <h2 style="text-align:center; color:#c79b3b; margin-bottom:25px;">Mis momentos favoritos ✨</h2>
+    <div class="galeria">
+        <img src="Fotoxv1.jpg" alt="Alma">
+        <img src="Fotoxv3.jpg" alt="Alma">
+        <img src="Fotoxv4.jpg" alt="Alma">
+        <img src="Fotoxv6.jpg" alt="Alma">
+        <img src="Fotoxv8.jpg" alt="Alma">
     </div>
 </section>
 
