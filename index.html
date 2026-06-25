@@ -94,19 +94,20 @@
         /* 🆕 Estilo para las fotos inferiores */
         .galeria {
             max-width: 1000px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
+            margin: 0 auto 50px;
+            padding: 0 15px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
+            gap: 18px;
         }
 
         .galeria img {
             width: 100%;
-            height: 220px;
-            object-fit: cover;
+            height: auto;
+            max-height:450px;
+            object-fit: contain;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 12px rgba(199,155,59,0.2);
             border: 3px solid #f7d9e4;
         }
 
@@ -160,7 +161,7 @@
 
 <!-- 🆕 Sección de fotos -->
 <section>
-    <h2 style="text-align:center; color:#c79b3b; margin-bottom:25px;">Mis momentos favoritos ✨</h2>
+    <h2 style="text-align:center; color:#c79b3b; margin-bottom:25px;">Brilla desde tu alma ✨</h2>
     <div class="galeria">
         <img src="Fotoxv1.jpg" alt="Alma">
         <img src="Fotoxv16.jpg" alt="Alma">
