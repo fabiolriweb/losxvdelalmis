@@ -10,11 +10,25 @@
         body {
             margin: 0;
             font-family: Georgia, serif;
-            background: linear-gradient(to bottom, #fff7fa, #fdeef4);
             color: #4a3a3a;
             text-align: center;
-        }
+            background-color: #fdf3f7;  
+            position: relative; 
+}
+body::before  { 
+    content: "";
+    position: fixed;
+    inset: 0;
 
+    background-image: url("fondo-floral.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 450px;
+
+    opacity: 0.12;          
+    z-index: -1;
+    pointer-events: none;
+}
         /* Portada CORREGIDA */
         header {
             height: 100vh;
@@ -59,10 +73,11 @@
         .tarjeta {
             max-width: 850px;
             margin: auto;
-            background: white;
+            background: rgba(255,255,255,.95);
+            backdrop-filter: blur(3px);
             padding: 40px 25px;
             border-radius: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 35px rgba(0,0,0,.10);
         }
 
         h2 {
@@ -112,10 +127,10 @@
         }
 
         footer {
-            background: #f7d9e4;
-            padding: 30px;
-            color: #7b5b5b;
-            margin-top: 20px;
+            background: rgba(247,217,228,.75);
+            backdrop-filter: blur(4px);
+            padding:30px;
+            color:#7b5b5b;
         }
     </style>
 </head>
